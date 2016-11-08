@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">FractalsGen</string>
+
+    <string name="title">Fractals Generator by Guillaume Vrilliaux!</string>
+    <string name="action_settings">Settings</string>
+</resources>
