@@ -1,61 +1,69 @@
 package com.guillaume.fractalsgen;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class MainActivity extends Activity {
 
-    private DrawView drawView;
+    private ListView fractalList;
+    private ArrayAdapter<String> listAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-        drawView = new DrawView(this);
-        setContentView(drawView);
+        fractalList = (ListView)findViewById(R.id.list_fractal);
+
+        ArrayList<String> fractal_list = new ArrayList<String>();
+        fractal_list.addAll(Arrays.asList(getResources().getStringArray(R.array.fractals)));
+
+        listAdapter = new ArrayAdapter<String>(this, R.layout.item_list_fractal, fractal_list);
+        fractalList.setAdapter(listAdapter);
+        fractalList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent i = new Intent(getApplicationContext(), DrawActivity.class);
+                switch(position){
+                    case 0:
+                        i.putExtra("fractal_name", "f_tree");
+                        break;
+
+                    case 1:
+                        i.putExtra("fractal_name", "f_mandelbrot");
+                        break;
+
+                    default: break;
+                }
+                startActivity(i);
+            }
+        });
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        super.onTouchEvent(event);
-
-        switch (event.getAction()){
-            case MotionEvent.ACTION_DOWN:
-                drawView = new DrawView(getApplicationContext());
-                setContentView(drawView);
-                break;
-
-            case MotionEvent.ACTION_MOVE:
-                break;
-
-            case MotionEvent.ACTION_UP:
-                break;
-        }
-        return true;
     }
 }

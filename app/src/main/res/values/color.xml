@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="bkg_color">#555555</color>
+    <color name="btn_color">#cccccc</color>
+    <color name="text_color">#ffffff</color>
+
+</resources>

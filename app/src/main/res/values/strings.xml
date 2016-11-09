@@ -1,6 +1,13 @@
 <resources>
-    <string name="app_name">FractalsGen</string>
+    <string name="app_name">FractalGen</string>
 
-    <string name="title">Fractals Generator by Guillaume Vrilliaux!</string>
+    <string name="title">Fractals Generator</string>
     <string name="action_settings">Settings</string>
+
+    <string name="title_activity_draw">"Fractal" Draw!</string>
+
+    <string-array name="fractals">
+        <item name="f_arbre">Arbre Fractal</item>
+        <item name="f_mandelbrot">Fractale de Mandelbrot</item>
+    </string-array>
 </resources>

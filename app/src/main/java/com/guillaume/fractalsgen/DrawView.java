@@ -26,7 +26,7 @@ public class DrawView extends View {
         width = canvas.getWidth();
 
         arbre = new ArbreFractal();
-        arbre.drawArbre(canvas, width/2, height, -90, 20);
+        arbre.drawArbre(canvas, width/2, height, -90, 20, 50, 6);
     }
 
 }
