@@ -10,4 +10,5 @@
         <item name="f_arbre">Arbre Fractal</item>
         <item name="f_mandelbrot">Fractale de Mandelbrot</item>
     </string-array>
+
 </resources>

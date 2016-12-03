@@ -1,6 +1,7 @@
 package com.guillaume.fractalsgen;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -8,13 +9,29 @@ import android.view.MotionEvent;
 
 public class DrawActivity extends Activity {
 
-    private DrawView drawView;
+    private FractalTreeView fTreeView;
+    String fractalName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        drawView = new DrawView(this);
-        setContentView(drawView);
+        Intent i = getIntent();
+        fractalName = i.getStringExtra("fractal_name");
+        switch(fractalName){
+            case "f_tree":
+                fTreeView = new FractalTreeView(this);
+                setContentView(fTreeView);
+                break;
+
+            case "f_mandelbrot":
+                finish();
+                break;
+
+            default:
+                fTreeView = new FractalTreeView(this);
+                setContentView(fTreeView);
+                break;
+        }
     }
 
     @Override
@@ -40,8 +57,17 @@ public class DrawActivity extends Activity {
 
         switch (event.getAction()){
             case MotionEvent.ACTION_DOWN:
-                drawView = new DrawView(getApplicationContext());
-                setContentView(drawView);
+                switch(fractalName){
+                    case "f_tree":
+                        fTreeView = new FractalTreeView(getApplicationContext());
+                        setContentView(fTreeView);
+                        break;
+
+                    case "f_mandelbrot":
+                        break;
+
+                    default: break;
+                }
                 break;
 
             case MotionEvent.ACTION_MOVE:
