@@ -1,8 +1,17 @@
-<TextView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/btn_list_fractal"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/btn_color"
-    android:gravity="center"
-    android:padding="10dp" />
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp">
+
+    <TextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/btn_list_fractal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/btn_color"
+        android:textColor="@color/text_color"
+        android:gravity="center"
+        android:padding="10dp" />
+
+</RelativeLayout>

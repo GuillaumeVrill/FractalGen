@@ -7,8 +7,39 @@
     <string name="title_activity_draw">"Fractal" Draw!</string>
 
     <string-array name="fractals">
+        <item name="f_presentation">Infos sur les fractales</item>
         <item name="f_arbre">Arbre Fractal</item>
         <item name="f_mandelbrot">Fractale de Mandelbrot</item>
     </string-array>
+
+
+
+    <!-- Contenu de l'activity d'information -->
+    <string name="title_activity_infos">InfosActivity</string>
+    <string name="infos">
+        Un objet fractal est un objet dont chaque élément est aussi un objet fractal similaire (Wikipédia).\n\n
+
+        J\'ai découvert les fractales en réalisant des recherches sur les figures de Lichtenberg (et là je suis sûr que votre première réaction sera proche de "Hein?!?").\n
+        Plutôt qu\'un long discours, je préfère vous renvoyer vers des informations dignes de ce nom sur le web. Pour les figures de Lichtenberg, c\'est par là:\n
+    </string>
+    <string name="lien1"><a href="http://sweetrandomscience.blogspot.fr/2012/10/les-figures-de-lichtenberg-comment-la.html">SweetRandomScience</a></string>
+    <string name="lien2"><a href="https://fr.wikipedia.org/wiki/Figure_de_Lichtenberg">Wikipédia - Figures de Lichtenberg</a></string>
+    <string name="infos2">
+        \n\n
+        Pour les fractales maintenant, les explications de wikipédia sont claires, mais si vous souhaitez en savoir d\'avantage, je vous place également quelques liens
+        menant à des vidéos qui montrent certains de leurs usages, notamment dans le monde de la modélisation 3D et des effets spéciaux (comme les explosions de lave de Star wars!):\n
+    </string>
+    <string name="lien3"><a href="https://fr.wikipedia.org/wiki/Fractale">Wikipédia - Fractales</a></string>
+    <string name="lien4"><a href="https://www.youtube.com/watch?v=h3rshqpr3JY">Youtube (vidéo en 4 partie)</a></string>
+    <string name="lien5"><a href="https://www.youtube.com/watch?v=yZ695z8VJVk#t=715">Youtube (effets spéciaux Star Wars)</a></string>
+    <string name="infos3">
+        \n\n
+        C\'est suite à ces liens que j\'ai eu envie de programmer quelques fractales de base, pour m\'amuser (vous ne trouvez pas ça amusant vous? Ah bon...).\n\n
+
+        Amusez-vous bien avec cette application!\n
+        Guillaume vrilliaux.
+    </string>
+
+    <string name="hello_world">Hello world!</string>
 
 </resources>

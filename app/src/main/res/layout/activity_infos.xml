@@ -1,0 +1,68 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context="com.guillaume.fractalsgen.InfosActivity">
+
+        <TextView
+            android:text="@string/infos"
+            android:id="@+id/infos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/link1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lien1" />
+
+        <TextView
+            android:id="@+id/link2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lien2" />
+
+        <TextView
+            android:text="@string/infos2"
+            android:id="@+id/infos2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/link3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lien3" />
+
+        <TextView
+            android:id="@+id/link4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lien4" />
+
+        <TextView
+            android:id="@+id/link5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lien5" />
+
+        <TextView
+            android:text="@string/infos3"
+            android:id="@+id/infos3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</ScrollView>

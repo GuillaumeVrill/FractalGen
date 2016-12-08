@@ -27,6 +27,10 @@
             android:name=".DrawActivity"
             android:label="@string/title_activity_draw" >
         </activity>
+        <activity
+            android:name=".InfosActivity"
+            android:label="@string/title_activity_infos" >
+        </activity>
     </application>
 
 </manifest>

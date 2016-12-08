@@ -10,6 +10,7 @@ import android.view.MotionEvent;
 public class DrawActivity extends Activity {
 
     private FractalTreeView fTreeView;
+    private FractalMandelbrotView fMandelbrotView;
     String fractalName;
 
     @Override
@@ -24,13 +25,11 @@ public class DrawActivity extends Activity {
                 break;
 
             case "f_mandelbrot":
-                finish();
+                fMandelbrotView = new FractalMandelbrotView(this);
+                setContentView(fMandelbrotView);
                 break;
 
-            default:
-                fTreeView = new FractalTreeView(this);
-                setContentView(fTreeView);
-                break;
+            default: break;
         }
     }
 
@@ -64,6 +63,8 @@ public class DrawActivity extends Activity {
                         break;
 
                     case "f_mandelbrot":
+                        fMandelbrotView = new FractalMandelbrotView(this);
+                        setContentView(fMandelbrotView);
                         break;
 
                     default: break;
